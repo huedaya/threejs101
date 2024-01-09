@@ -8,11 +8,11 @@ const App = () => {
     const meshRef = useRef();
 
     // Rotate the mesh
-    useFrame((state, delta) => (meshRef.current.rotation.y += delta / 10));
+    useFrame((state, delta) => (meshRef.current.rotation.y += delta / 5));
 
     // Apply texture
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load("moon.jpg");
+    const texture = textureLoader.load("world_map.svg");
     const material = new THREE.MeshStandardMaterial({
       map: texture,
     });
